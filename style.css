@@ -1,0 +1,213 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+  }
+
+  header {
+    background-color: #7886C7;
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  .nav {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav li a {
+    color: #FFF2F2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  .nav li a:hover {
+    color: #ffdd57;
+  }
+
+  /* Highlight link berdasarkan target */
+  #home:target ~ header .nav li a[href="#home"],
+  body:not(:has(:target)) .nav li a[href="#home"] {
+    color: #ffdd57;
+  }
+
+  #cari:target ~ header .nav li a[href="#cari"] {
+    color: #ffdd57;
+  }
+
+  #tambah:target ~ header .nav li a[href="#tambah"] {
+    color: #ffdd57;
+  }
+
+  .hero {
+    position: relative;
+    padding: 100px 20px 60px;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 500px;
+    background-color: #94a3d6ff;
+    border-radius: 50%;
+    opacity: 0.2;
+    z-index: 1;
+    transform: translate(-30%, -50%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 25px;
+    padding: 40px;
+    color: white;
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.42);
+  }
+
+  .hero-overlay {
+    background-color: rgba(45, 51, 107, 0.55);
+    padding: 30px;
+    border-radius: 20px;
+  }
+
+  .hero-overlay span {
+    display: inline-block;
+    background-color: #7886C7;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .hero-overlay p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .divider {
+    height: 60px;
+    background-color: #7886C7;
+    margin-top: 50px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+
+  .section-cari {
+    padding: 20px 0;
+    background-color: #f7f7f7;
+  }
+
+  .section-cari .wrapper {
+    max-width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .cari.section {
+    flex: 1 1 30%;
+    background-color: rgba(169, 181, 223, 0.55);
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+  }
+
+  .cari.section .icon-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #7886C7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .cari.section h3 {
+    margin: 20px 0 10px;
+    color: #2d2d2d;
+  }
+
+  .cari.section p {
+    color: #666;
+  }
+
+  .cari.section a {
+    margin-top: 15px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid #7886C7;
+    border-radius: 20px;
+    color: #7886C7;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .nav {
+      margin-top: 15px;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .hero {
+      padding: 80px 20px 60px;
+    }
+
+    .hero-content {
+      padding: 30px;
+    }
+  }
